@@ -1,0 +1,46 @@
+<mat-drawer-container class="example-container" style="height: 100% !important;">
+    <mat-drawer mode="side" [opened]="sidebarOpened" style="width: 250px;">
+      <mat-nav-list>
+        <mat-list-item routerLink="home">
+          <mat-icon>home</mat-icon><span>Home</span>
+        </mat-list-item>
+
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header routerLink="menu">
+          <mat-icon>menu</mat-icon> <span> Menu</span>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+              <mat-list-item  routerLink="drink">
+                  <mat-icon> local_cafe </mat-icon> <span>Drinks</span>
+              </mat-list-item>
+              <mat-list-item routerLink="sweet">
+                  <mat-icon> cake </mat-icon><span>Sweets</span>
+              </mat-list-item>
+
+          </mat-nav-list>
+      </mat-expansion-panel>
+
+      <mat-list-item routerLink="shop">
+          <mat-icon> storefront</mat-icon> <span>Shop</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="Person">
+        <span>Person</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="contact">
+        <mat-icon>  call </mat-icon> <span>Contact </span>
+      </mat-list-item>
+
+
+      </mat-nav-list>
+
+
+
+    </mat-drawer>
+
+    <mat-drawer-content>
+
+      <ng-content></ng-content>
+    </mat-drawer-content>
+  </mat-drawer-container>

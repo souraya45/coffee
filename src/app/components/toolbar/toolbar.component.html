@@ -1,0 +1,34 @@
+<p>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="menuButtonClicked()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="example-spacer"></span><div> BLOSSOM</div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with account_circle icon">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+  <button >
+    <select class="form-select" (change)="ChangeLang($event)" name="" id="">
+        <option [selected]="lang==='en'" value="en">English</option>
+        <option [selected]="lang==='fr'" value="fr">French</option>
+        <option [selected]="lang==='ar'" value="ar">Arabic</option>
+     </select>
+  </button>
+  </mat-toolbar>
+</p>
+
+
+
+
+
+
+
