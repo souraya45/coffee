@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
@@ -18,6 +17,9 @@ import { PersonDetailsComponent } from './components/person/person-details/perso
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SingUpComponent } from './-log/sing-up/sing-up.component';
+import { LoginComponent } from './-log/login/login.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -32,12 +34,12 @@ export function HttpLoaderFactory(http:HttpClient){
     LoginComponent,
     DashboardComponent,SidebarComponent, ToolbarComponent,
     HighlightDirective, SquarePipe, ShopComponent, HomeComponent, ShopComponent,
-    PersonManagementComponent, PersonDetailsComponent,
+    PersonManagementComponent, PersonDetailsComponent, SingUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, MatCardModule,
     SharedModule,
     ToastrModule.forRoot(),
     HttpClientModule,

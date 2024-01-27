@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './core/guards/auth.guard';
 import { loginGuard } from './core/guards/login.guard';
 import { MenuComponent } from './-side/menu/menu.component';
@@ -11,6 +10,7 @@ import { SweetsComponent } from './-side/sweets/sweets.component';
 import { ShopComponent } from './-side/shop/shop.component';
 import { ContactComponent } from './-side/contact/contact.component';
 import { PersonDetailsComponent } from './components/person/person-details/person-details.component';
+import { LoginComponent } from './-log/login/login.component';
 
 const routes: Routes = [
   {
@@ -64,6 +64,7 @@ const routes: Routes = [
     component: ShopComponent,
     canActivate: [authGuard]
   },
+
 
 
 ];

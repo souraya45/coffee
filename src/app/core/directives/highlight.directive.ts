@@ -7,7 +7,7 @@ export class HighlightDirective {
 
   constructor(private eleRef: ElementRef) {
 
-    eleRef.nativeElement.style.background = 'blue';
+    eleRef.nativeElement.style.background = '';
 
    }
    @HostListener('mouseenter') onMouseEnter() {

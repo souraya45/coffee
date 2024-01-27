@@ -1,7 +1,9 @@
+import { SpinnerService } from './core/services/spinner.service';
 import { Component } from '@angular/core';
 import { AuthService } from './core/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,7 @@ export class AppComponent {
   constructor(
     private authServise: AuthService,
     private translateService:TranslateService,
+    private SpinnerService:SpinnerService,
 
     ){
       this.translateService.setDefaultLang('en');

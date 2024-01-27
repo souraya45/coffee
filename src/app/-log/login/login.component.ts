@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { SpinnerService } from 'src/app/core/services/spinner.service';
 
 
 @Component({
@@ -18,11 +19,15 @@ date: string | number | Date | undefined;
     private fb: FormBuilder,
     private authService : AuthService,
     private router: Router,
-    private toastr: ToastrService,) {
+    private toastr: ToastrService,
+    private spinner:SpinnerService,
+    ) {
       this.date= new Date()
     }
 
   ngOnInit(): void {
+    console.log("form login");
+
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -30,6 +35,7 @@ date: string | number | Date | undefined;
   }
 
   onSubmit(): void {
+    console.log("login")
     if (this.loginForm.valid) {
       const username = this.loginForm.get('username').value;
       const password = this.loginForm.get('password').value;
@@ -40,10 +46,13 @@ date: string | number | Date | undefined;
         this.router.navigate(['/dashboard']);
       } else {
         // Handle authentication error (show error message, etc.)
-        this.toastr.error('username and password does match!','error!')
+        this.toastr.error("username and password does match!","message")
       }
 
     }
+
+
+
   }
 }
 
